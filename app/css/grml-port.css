@@ -1,0 +1,110 @@
+:host {
+  height: 2rem;
+  width: 2rem;
+  background-color: #383334;
+  margin: .5rem 0;
+  position: relative;
+  display: block;
+}
+
+label {
+  color: #ffffff;
+  font-size: .8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  white-space: nowrap;
+  opacity: .8;
+  display: none;
+}
+
+:host(:hover) {
+  background-color: #655C5E;
+}
+
+:host(:hover) label {
+  display: block;
+}
+
+:host(.has-warnings:hover) .warnings {
+  display: block;
+}
+
+.warnings {
+  display: none;
+  list-style-type: none;
+  padding: 0.5rem;
+  position: absolute;
+  background-color: rgba(241, 135, 0, .5);
+  border: thin solid var(--lmu-orange-100);
+  right: 100%;
+  margin: 0;
+  min-width: 8rem;
+  bottom: 100%;
+  z-index: 255;
+}
+
+:host(grml-input-port)::after {
+  left: -.5rem;
+}
+
+:host(grml-output-port)::after {
+  right: -.5rem;
+}
+
+:host(grml-input-port)::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 1rem;
+  border-left: 1.25rem solid;
+  border-color: #009440;
+  border-top: .75rem solid transparent;
+  border-bottom: .75rem solid transparent;
+  margin: .25rem .5rem;
+}
+
+:host(grml-input-port) label {
+  left: 0;
+  padding: 0 .5rem;
+  transform: translate(-100%, -50%);
+}
+
+:host(grml-output-port)::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 1rem;
+  border-left: 1.25rem solid;
+  border-color: #009440;
+  border-top: .75rem solid transparent;
+  border-bottom: .75rem solid transparent;
+  margin: .25rem .5rem;
+}
+
+:host(grml-output-port) label {
+  right: 0;
+  padding: 0 .5rem;
+  transform: translate(100%, -50%);
+}
+
+:host(grml-info-port) {
+  margin-bottom: -1rem;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+:host(grml-info-port)::before {
+  content: 'i';
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}

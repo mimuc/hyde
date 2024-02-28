@@ -1,0 +1,133 @@
+{
+  "name": "hyde",
+  "description": "HyDE - Hybrid Development Environment",
+  "version": "0.1.0",
+  "publisher": "de.lmu.ifi.medien",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/vsc/main.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "grml.editor.block",
+        "displayName": "HyDE Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.grml.json"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "grml.editor.text",
+        "displayName": "HyDE Text Editor",
+        "selector": [
+          {
+            "filenamePattern": "*grml.json"
+          }
+        ],
+        "priority": "option"
+      }
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --silent --verbose --coverage",
+    "lint": "eslint ./app/src --ext .ts",
+    "app-compile": "webpack --config ./app/webpack.config.js",
+    "app-watch": "webpack --config ./app/webpack.config.js --watch",
+    "vscode:prepublish": "npm run vsc-package",
+    "vsc-compile": "webpack --config ./ext/webpack.config.js",
+    "vsc-watch": "webpack --config ./ext/webpack.config.js --watch",
+    "vsc-package": "webpack --mode production --devtool hidden-source-map",
+    "vsc-compile-tests": "tsc -p . --outDir out",
+    "vsc-watch-tests": "tsc -p . -w --outDir out",
+    "vsc-pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "vsc-lint": "eslint ./ext/src --ext ts",
+    "vsc-test": "node ./out/test/runTest.js",
+    "postinstall": "node postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mimuc/hyde"
+  },
+  "keywords": [
+    "machine",
+    "learning",
+    "graphical",
+    "programming",
+    "hybrid editor",
+    "hybrid development tool",
+    "multi-paradigm"
+  ],
+  "author": "Thomas Weber et al.",
+  "contributors": [
+    {
+      "name": "Thomas Weber",
+      "email": "thomas.weber@ifi.lmu.de",
+      "url": "http://www.medien.ifi.lmu.de/team/thomas.weber/"
+    },
+    { "name": "Christina Winiker" },
+    { "name": "Janina Ehe" },
+    { "name": "Florian Klement" }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/jest": "^29.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@types/ws": "^8.5.4",
+    "@types/zeromq": "^5.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "@vscode/test-electron": "^2.1.5",
+    "@vscode/zeromq": "^0.0.8",
+    "babel-jest": "^29.0.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "crypto": "^1.0.1",
+    "eslint": "^8.23.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "glob": "^8.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
+    "node-crypto": "^1.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@tensorflow-models/mobilenet": "^2.1.0",
+    "@tensorflow/tfjs": "^3.20.0",
+    "@tensorflow/tfjs-node": "^3.20.0",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "jimp": "^0.16.2",
+    "net": "^1.0.2",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tls": "^0.0.1",
+    "url": "^0.11.0",
+    "vscode": "*",
+    "ws": "^8.12.0",
+    "zeromq": "^6.0.0-beta.16"
+  }
+}

@@ -1,0 +1,73 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "no-self-assign": "warn",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/naming-convention": [
+            "warn",
+            {
+                "selector": "classProperty",
+                "modifiers": [ "static" ],
+                "format": [ "UPPER_CASE" ]
+            }
+        ],
+        "@typescript-eslint/semi": "warn",
+        "@typescript-eslint/no-explicit-any": "off",
+        "curly": "warn",
+        "eqeqeq": "warn",
+        "no-throw-literal": "warn",
+        "quotes": [ "warn", "single" ],
+        "space-before-function-paren": [ "warn", "always" ],
+        "array-bracket-spacing": [ "warn", "always" ],
+        "object-curly-spacing": [ "warn", "always" ],
+        "@typescript-eslint/member-ordering": [
+            "warn",
+            {
+                "classes": [
+                    "public-static-field",
+                    "protected-static-field",
+                    "private-static-field",
+                    "public-static-method",
+                    "protected-static-method",
+                    "private-static-method",
+
+                    "public-field",
+                    "protected-field",
+                    "private-field",
+                    "abstract-field",
+
+                    "constructor",
+
+                    [ "get", "set" ],
+
+                    "public-method",
+                    "protected-method",
+                    "private-method",
+                    "abstract-method"
+                ]
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "out",
+        "dist",
+        "**/*.d.ts"
+    ]
+}

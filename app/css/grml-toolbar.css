@@ -1,0 +1,36 @@
+#toolbar {
+  height: 2rem;
+  width: 100%;
+  background-color: var(--secondary-background-color);
+  color: var(--main-text-color);
+
+  display: flex;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+}
+
+#toolbar button {
+  width: auto;
+  height: 2rem;
+  border: 1px solid #2e3a41;
+  font-size: inherit;
+  color: #d4d4d4;
+  background-color: var(--secondary-background-color);
+}
+
+#toolbar button:hover {
+  background-color: var(--primary-highlight-color-transparent);
+}
+
+#toolbar button.active {
+  color: var(--primary-highlight-color);
+}
+
+#toolbar button.disabled {
+  color: #484e51;
+  pointer-events: none;
+}
+
+.group {
+  padding-right: 1rem;
+}

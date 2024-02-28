@@ -1,0 +1,23 @@
+#fit.fitting:after {
+  content: 'ting';
+
+  animation: fitting 2s infinite;
+}
+
+@keyframes fitting {
+  0% {
+    content: 'ting   ';
+  }
+  25% {
+    content: 'ting.  ';
+  }
+  50% {
+    content: 'ting.. ';
+  }
+  75% {
+    content: 'ting...';
+  }
+  100% {
+    content: 'ting';
+  }
+}

@@ -1,0 +1,178 @@
+@import url(theme.css);
+
+:host {
+  background-color: #242827;
+  min-height: 8rem;
+  min-width: 8rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  box-shadow:
+    1px 2px 4px rgba(0, 0, 0, .15),
+    2px 4px 12px rgba(0, 0, 0, .1),
+    3px 6px 36px rgba(0, 0, 0, .05);
+}
+
+.header {
+  background-color: var(--primary-highlight-color);
+  color: #ffffff;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:host(.data-source) {
+  border-radius: 1rem;
+}
+
+.header img {
+  max-height: 2rem;
+  max-width: 2rem;
+  cursor: grab;
+}
+
+.header .menu-handle {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  background-color: #009440;
+  background-image: url(../img/settings.svg);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header h3 {
+  font-size: 1rem;
+  padding: .5rem;
+  flex: 1;
+  outline: none;
+  white-space: nowrap;
+  cursor: text;
+  /* text-overflow: ellipsis; */
+  background: transparent;
+  margin-right: 2rem;
+}
+
+.block-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputs, .outputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  max-height: 100%;
+  align-self: center;
+}
+
+.core {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.core img {
+  max-width: 4rem;
+}
+
+.controls,
+.analytics {
+  flex: 1;
+  padding: 1rem;
+  width: 8rem;
+  color: #ffffff;
+}
+
+.analytics {
+  align-self: center;
+}
+
+.analytics img {
+  background-color: #333333;
+  height: 8rem;
+  width: 8rem;
+}
+
+.controls label {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+
+.core button, .controls button {
+  background-color: #50494A;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: .5rem 2rem;
+  width: 100%;
+  margin: .25rem .25rem .5rem .25rem;
+}
+
+.core button:hover, .controls button:hover {
+  background-color: #009440;
+}
+
+.core button:active, .controls button:active {
+  opacity: .8;
+}
+
+.core button, .controls button {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 2rem;
+}
+
+.core button.complete, .controls button.complete {
+  background-color: #5BB170;
+  background-image: url(../img/complete.svg);
+}
+
+.core button.incomplete, .controls button.incomplete {
+  /* background-color: #C94C35; */
+  background-color: rgb(224, 185, 0);
+  background-image: url(../img/incomplete.svg);
+}
+
+:host grml-input-port.highlighted, :host grml-output-port.highlighted {
+  background-color: #ffffff;
+}
+
+:host grml-input-port.highlighted-warn, :host grml-output-port.highlighted-warn {
+  background-color: rgb(255, 224, 0);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin-bottom: -1.5rem; */
+}
+
+:host(.has-warnings:hover) .warnings {
+  display: block;
+}
+
+.warnings {
+  display: none;
+  list-style-type: none;
+  padding: 0.5rem;
+  position: absolute;
+  background-color: rgba(241, 135, 0, .5);
+  border: thin solid var(--lmu-orange-100);
+  right: 100%;
+  margin: 0;
+  min-width: 8rem;
+  bottom: 100%;
+  z-index: 255;
+}

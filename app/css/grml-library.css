@@ -1,0 +1,55 @@
+@import url(./global-style.css);
+
+:host {
+  display: block;
+  overflow-y: auto;
+}
+
+h4 {
+  margin: 0;
+  padding: .25rem .5rem;
+  font-size: .67rem;
+  text-transform: uppercase;
+  background-color: rgba(0, 144, 64, .5);
+  color: #ffffff;
+}
+
+grml-collapsible {
+  display: flex;
+}
+
+grml-collapsible.hidden {
+  display: none;
+}
+
+grml-collapsible ul {
+  max-width: 100%;
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+grml-collapsible li {
+  display: flex;
+  flex-direction: row;
+  margin: .5rem;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--main-text-color);
+
+}
+
+grml-collapsible span {
+  flex: 1;
+  overflow: hidden;
+  max-width: 100%;
+  text-align: left;
+  padding: .5rem;
+}
+
+grml-collapsible img {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, .2);
+}

@@ -1,0 +1,5 @@
+:host {
+  background-color: var(--main-background-color);
+  background-image: url(../img/grid.png);
+  overflow: auto;
+}

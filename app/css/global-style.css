@@ -1,0 +1,215 @@
+:root {
+  --grid-size: 32px;
+}
+
+[draggable="true"] {
+  cursor: grab;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  background-color: #009440;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: .5rem;
+}
+
+
+input {
+  width: 100%;
+  border: none;
+  padding: .5rem;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+input:focus {
+  background-color: #ffffff;
+  color: var(--primary-highlight-color);
+}
+
+grml-breadcrumb {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--secondary-background-color);
+  color: var(--main-text-color);
+  height: 2rem;
+  flex-shrink: 1;
+}
+
+grml-breadcrumb a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  padding: .25rem 1.5rem;
+  box-sizing: border-box;
+  background-color: var(--main-background-color);
+}
+
+grml-breadcrumb a:last-child {
+  background-color: var(--primary-highlight-color);
+}
+
+grml-breadcrumb a::after {
+  content: '';
+  display: block;
+  width: 1.42rem; /* a²*2=c², with c=2 => sqrt(2) - currently not supported by chrome */
+  height: 1.42rem;
+  background-color: inherit;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -0.9em;
+  top: 0.25rem;
+  z-index: 1;
+}
+
+grml-composite-input,
+grml-composite-output {
+  border-radius: 50%;
+  overflow: visible;
+  min-width: 4rem;
+  min-height: 4rem;
+}
+
+
+:host(grml-composite-output) .header,
+:host(grml-composite-input) .header {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: -2rem;
+}
+
+:host(grml-composite-output) .header h3,
+:host(grml-composite-input) .header h3 {
+  background-color: transparent;
+}
+
+:host(grml-composite-output) .inputs,
+:host(grml-composite-input) .outputs {
+  width: auto;
+}
+
+:host(grml-composite-input) .inputs,
+:host(grml-composite-input) .core,
+:host(grml-composite-output) .outputs,
+:host(grml-composite-output) .core {
+    display: none;
+}
+
+:host(grml-composite-input) .block-content,
+:host(grml-composite-output) .block-content {
+  justify-content: center;
+}
+
+:host(grml-composite-input) grml-output-port,
+:host(grml-composite-output) grml-input-port {
+  background-color: #009440;
+  border-radius: 50%;
+}
+
+:host(grml-composite-input[protected]) grml-output-port,
+:host(grml-composite-output[protected]) grml-input-port {
+  background-color: #7f7f7f;
+}
+
+:host(grml-composite-input) grml-output-port {
+  margin: 0;
+  height: 4rem;
+  width: 4rem;
+}
+
+:host(grml-composite-output) grml-input-port {
+  margin: 1rem;
+  height: 2rem;
+  width: 2rem;
+  box-shadow: 0 0 0 .5rem #242827, 0 0 0 1rem #009440;
+}
+
+:host(grml-composite-output[protected]) grml-input-port {
+  box-shadow: 0 0 0 .5rem #242827, 0 0 0 1rem #7f7f7f;
+}
+
+
+:host(grml-composite-input) grml-output-port::before,
+:host(grml-composite-output) grml-input-port::before {
+  content: none;
+}
+
+.has-warnings::after {
+  content: '!';
+  font-size: .8rem;
+  line-height: 1rem;
+  text-align: center;
+  font-weight: bold;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--lmu-orange-100);
+  position: absolute;
+  top: -.5rem;
+  left: -.5rem;
+  border-radius: 50%;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, .18),
+    0 2px 4px rgba(0, 0, 0, .12),
+    0 3px 8px rgba(0, 0, 0, .06);
+}
+
+grml-tooltip {
+  display: block;
+  padding: .25rem .5rem;
+  background-color: #242827;
+  color: #8fb1b4;
+  position: absolute;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, .18),
+    0 2px 4px rgba(0, 0, 0, .12),
+    0 3px 8px rgba(0, 0, 0, .06);
+  z-index: 255;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+grml-tooltip.hidden {
+  display: none !important;
+}
+
+:host(grml-image-set-preview) ul {
+  color: #000000;
+  list-style-type: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80vw;
+}
+
+:host(grml-image-set-preview) li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: .25rem;
+  width: 8rem;
+  max-height: 10rem;
+}
+
+:host(grml-image-set-preview) canvas {
+  max-width: 8rem;
+  max-height: 8rem;
+}

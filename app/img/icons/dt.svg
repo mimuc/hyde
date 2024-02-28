@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,35.9795,86.9724)">
+        <text x="-28.403px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:14px;fill:white;">Decision <tspan x="28.923px 36.955px 41.617px " y="0px 0px 0px ">Tre</tspan>e</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,9.70497)">
+        <g transform="matrix(0.67485,0,0,0.67485,33.1287,-5.08077)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,53.1376,11.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,13.1287,11.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,13.1287,31.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,-1.87126,31.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,28.1287,31.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,43.1287,31.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.67485,0,0,0.67485,63.1287,31.6317)">
+            <circle cx="25" cy="27.218" r="3.705" style="fill:white;"/>
+        </g>
+        <path d="M15,50L30,30L50,13.287L70.009,30L80,50" style="fill:none;stroke:white;stroke-width:1px;"/>
+        <path d="M30,50L30,30" style="fill:none;stroke:white;stroke-width:1px;"/>
+        <path d="M45,50L30,30" style="fill:none;stroke:white;stroke-width:1px;"/>
+        <path d="M60,50L70.098,30" style="fill:none;stroke:white;stroke-width:1px;"/>
+    </g>
+</svg>

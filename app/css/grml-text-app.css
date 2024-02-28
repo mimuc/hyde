@@ -1,0 +1,18 @@
+/* General layout of the text editor*/
+:root {
+    --border-width: 3px;
+    --enumeration-width: 4rem;
+    --font-code: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+main {
+    height: 100%;
+    overflow: hidden;
+    flex: 1;
+    background-color: var(--main-background-color);
+    display: flex;
+}
+
+grml-text-editor {
+    min-height: 100%;
+}

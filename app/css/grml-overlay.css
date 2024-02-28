@@ -1,0 +1,34 @@
+:host(.hidden) {
+  display: none !important;
+}
+
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 255;
+}
+
+
+.content-wrapper {
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+h2 {
+  background-color: #009440;
+  padding: .5rem;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.25rem;
+}

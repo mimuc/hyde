@@ -1,0 +1,212 @@
+@import url(grml-text-theme.css);
+/* variables */
+
+:host {
+    display: block;
+}
+
+/* Layout of the single container and elements for the textual application */
+.flex-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    font-family: var(--font-code);
+}
+
+/* enumartion */
+aside.enumeration,
+#scripting-area {
+    font-family: var(--font-code);
+    font-size: 14px;
+    line-height: 19px;
+}
+
+aside.enumeration {
+    max-width: var(--enumeration-width);
+    width: 4rem;
+    float: left;
+    text-align: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+#enumeration,
+#scroll {
+    min-height: 90vh;
+    padding-top: 1rem;
+}
+
+/* code container */
+grml-code {
+    width: fit-content;
+}
+
+#scroll {
+    overflow-x: scroll;
+    flex-grow: 1;
+    /* - width of enumeration */
+    overflow-y: hidden;
+    /* scrolls in flex-container */
+    height: fit-content;
+}
+
+#scripting-area {
+    width: 100%;
+    /* as wide as content needs */
+    box-sizing: border-box;
+}
+
+#scripting-area>* {
+    margin: 1rem 1rem;
+    position: relative;
+    border-left: var(--border-width) transparent solid;
+}
+
+pre {
+    margin: 0;
+}
+
+.code {
+    white-space: pre;
+}
+
+.code-container {
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    background-color: var(--secondary-background-color);
+    padding: 0.25rem;
+    flex-grow: 1;
+    /* strech width */
+}
+
+.code-container.invalid {
+    border: 1px solid #d24040;
+}
+
+:host(.disabled) .code-container {
+    opacity: 0.6 !important;
+    background-color: var(--secondary-background-color-transparent);
+}
+
+.code-snippet {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 7px;
+    margin-left: -1px;
+    border-left: transparent solid 7px;
+    /* such that code block is not moved when edited */
+}
+
+
+.code-snippet button {
+    padding-top: 0.25rem;
+    visibility: hidden;
+    width: 1.7rem;
+    height: 100%;
+    color: var(--primary-highlight-color);
+    background-color: var(--main-background-color);
+    border: none;
+}
+
+.code-snippet button.visible {
+    visibility: visible;
+}
+
+
+/* Highlighting on select */
+.highlight,
+.selected {
+    border-left: var(--border-width) var(--primary-highlight-color) solid !important;
+    z-index: 10;
+}
+
+.hide {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* warnings */
+.has-warnings::after {
+    top: 2rem;
+    left: 1rem;
+}
+
+:host(.has-warnings) .code-container {
+    border: 1px solid var(--lmu-orange-100);
+}
+
+:host(.has-warnings:hover) .warnings {
+    display: block;
+}
+
+.warnings {
+    display: none;
+    list-style-type: none;
+    padding: 0.5rem;
+    position: absolute;
+    background-color: var(--secondary-background-color);
+    color: var(--lmu-orange-100);
+    border: thin solid var(--lmu-orange-100);
+    /* left: calc(1.7rem + 13px);*/
+    left: 70%;
+    max-width: 25%;
+    top: -2rem;
+    min-width: 8rem;
+    z-index: 255;
+}
+
+/* focus */
+.code-snippet:focus-within {
+    border-left: var(--primary-highlight-color) solid 7px;
+    /* var(--border-width-large);*/
+}
+
+.code-container:focus-within {
+    border: 1px solid var(--primary-highlight-color-transparent);
+}
+
+:focus-visible {
+    outline: 0;
+    border: 0;
+}
+
+/* Styling code snippets in closure */
+
+:host-context(.closure) .code-snippet {
+    margin-left: calc(-14px - 1.7rem);
+    border-left: transparent solid 7px;
+}
+
+:host-context(.closure) .code-snippet button {
+    visibility: collapse;
+}
+
+:host(.open) .code-snippet:focus-within {
+    /* disable focus-within for parent closure */
+    border-left: transparent solid 7px;
+}
+
+:host-context(.closure .selected) .code-snippet {
+    border-left: var(--border-width) var(--primary-highlight-color) solid !important;
+    z-index: 10;
+}
+
+:host-context(.closure) .code-snippet:focus-within {
+    border-left: var(--primary-highlight-color) solid 7px;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    height: 0.75rem;
+    width: 0.75rem;
+    background: var(--main-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-highlight-color);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--secondary-background-color);
+}

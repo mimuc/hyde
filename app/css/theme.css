@@ -1,0 +1,22 @@
+:root {
+  --lmu-green-100: rgb(0, 136 , 58);
+  --lmu-black-100: rgb(35, 35 , 35);
+  --lmu-blue-100: rgb(15, 25 , 135);
+  --lmu-cyan-100: rgb(0, 159 , 227);
+  --lmu-violett-100: rgb(140, 64 , 145);
+  --lmu-red-100: rgb(215, 25 , 25);
+  --lmu-orange-100: rgb(241, 135 , 0);
+
+  --main-background-color: #263239;
+  --secondary-background-color: #1A2226;
+  --secondary-background-color-transparent: rgba(26, 34, 38, 0.6);
+  --main-text-color: #ffffff;
+
+  --primary-highlight-color: rgb(0, 144, 64);
+  --primary-highlight-color-transparent: rgba(0, 144, 64, 0.5);
+
+  --primary-background-highlight-color: rgba(0, 136, 59, 0.218);
+  --secondary-highlight-color: rgb(224, 192, 0);
+
+
+}

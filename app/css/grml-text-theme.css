@@ -1,0 +1,9 @@
+/* Variable definitions for textual application */
+
+:root {
+    --border-width: 2px;
+    --border-width-large: 7px;
+    --enumeration-width: 4rem;
+    --font-code: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}

@@ -1,0 +1,57 @@
+@import url(./global-style.css);
+
+:host {
+  background-color: var(--main-background-color);
+  background-image: url(../img/grid.png);
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 2rem);
+}
+
+.zoom-wrapper {
+  position: relative;
+  overflow: auto;
+  flex: 1;
+}
+
+.brushing-container{
+  position: absolute;
+  border: 2px solid var(--primary-highlight-color);
+  background-color: var(--primary-highlight-color-transparent);
+}
+
+.selected {
+  box-shadow: 0 0 0 2px #009440;
+}
+
+aside {
+  min-width: 16rem;
+  max-width: 25%;
+  resize: horizontal;
+  background-color: var(--secondary-background-color);
+  border: thin solid #151a1d;
+  display: flex;
+  flex-direction: column;
+}
+
+grml-property-editor,
+grml-block-library {
+  flex: 1;
+  border: thin solid #151a1d;
+  height: 50%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Translations for brushing container */
+.translate-left{
+  transform: translateX(-100%);
+}
+.translate-up{
+  transform: translateY(-100%);
+}
+.translate-up-left{
+  transform: translate(-100%, -100%);
+}

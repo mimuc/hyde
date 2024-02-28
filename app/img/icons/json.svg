@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M73.691,35.456L73.691,84.028L26.309,84.028L26.309,15.972L54.207,15.972L73.691,35.456Z" style="fill:none;stroke:white;stroke-width:2px;"/>
+    <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,127.898,51.4274)">
+        <path d="M73.691,35.456L54.207,15.972L73.691,15.972L73.691,35.456Z" style="fill:none;stroke:white;stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-0.771472,-0.443656)">
+        <text x="32.476px" y="78.527px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:14px;fill:white;">JSON</text>
+    </g>
+</svg>
